@@ -1,0 +1,13 @@
+{{page-title "Application"}}
+
+<div style="padding: 20px;">
+<h1>route test</h1>
+Current tests:
+{{#each @model as |test|}}
+  <div>
+    <LinkTo @route="test.test" @model={{test}}>{{test.id}} via object</LinkTo>
+    <LinkTo @route="test.test" @model={{test.id}}>{{test.id}} via string</LinkTo>
+  </div>
+{{/each}}
+{{outlet}}
+</div>
